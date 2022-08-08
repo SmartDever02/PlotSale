@@ -16,9 +16,7 @@ export default function LandModel() {
           shadow-mapSize-height={1024}
         />
         <group position={[0, 0, 0]}>
-          <Suspense fallback={'loading'}>
-            <Land />
-          </Suspense>
+          <Land />
         </group>
         <mesh rotation={[0, 0, 0]} position={[0, -1, 0]} receiveShadow>
           <planeBufferGeometry args={[10, 10, 1, 1]} />

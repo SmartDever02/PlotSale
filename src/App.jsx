@@ -1,4 +1,4 @@
-import { useEffect } from 'react';
+import { Suspense, useEffect } from 'react';
 import LandModel from './components/Land';
 
 function App() {
@@ -7,7 +7,21 @@ function App() {
       <h2 className='title'>SPORTBASE</h2>
       <div className='card__img'>
         <div className='scene'>
-          <LandModel />
+          <Suspense
+            fallback={
+              <div
+                style={{
+                  display: 'flex',
+                  justifyContent: 'center',
+                  alignItems: 'center',
+                }}
+              >
+                Plot Loading...
+              </div>
+            }
+          >
+            <LandModel />
+          </Suspense>
         </div>
         <h2 className='subtitle'>METAVERSE</h2>
       </div>
