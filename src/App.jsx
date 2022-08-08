@@ -14,6 +14,9 @@ function App() {
                   display: 'flex',
                   justifyContent: 'center',
                   alignItems: 'center',
+                  height: '400px',
+                  fontSize: '30px',
+                  color: 'white',
                 }}
               >
                 Plot Loading...
